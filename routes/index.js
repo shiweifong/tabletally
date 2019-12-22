@@ -4,10 +4,3 @@ exports.index = function(req, res){
         mainClass : 'landing'
     });
 };
-
-exports.article = function(req, res){
-    res.render('article', {
-        ngController : 'articleController',
-        mainClass : 'article'
-    });
-};

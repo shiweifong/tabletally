@@ -21,6 +21,7 @@ mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 moment = require('moment');
 qs = require('qs');
+config = require('./config');
 cron = require('node-cron');
 
 /**
@@ -70,49 +71,11 @@ app.use('/static', express.static('public'))
 // app.use(cors());
 
 app.get('/', routes.index);
-app.get('/article', routes.article);
 
 
 // APIs
 app.get('/api/:base/:api', api);
 app.post('/api/:base/:api', api);
-
-
-/**
- * CRON
- */
-
-article = require('./routes/api/article');
-
-// Pull SG, MY, IN, TH, JP News every 15 minutes
-cron.schedule('1-59/4 * * * *', function(){
-
-    var req = {}, res = {};
-    req.query = {};
-    req.query.Country = 'sg';
-    article.syncSources(req, res);
-
-    var req = {}, res = {};
-    req.query = {};
-    req.query.Country = 'my';
-    article.syncSources(req, res);
-
-    var req = {}, res = {};
-    req.query = {};
-    req.query.Country = 'in';
-    article.syncSources(req, res);
-
-    var req = {}, res = {};
-    req.query = {};
-    req.query.Country = 'th';
-    article.syncSources(req, res);
-
-    var req = {}, res = {};
-    req.query = {};
-    req.query.Country = 'jp';
-    article.syncSources(req, res);
-
-});
 
 
 /**

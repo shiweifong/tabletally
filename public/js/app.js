@@ -1,6 +1,5 @@
-var app = angular.module('worldnewsApp', []);
+var app = angular.module('tabletallyapp', []);
 
 app.controller('indexController', function ($scope, $http) {
-    alert('hi');
 });
 

@@ -24,12 +24,12 @@ qs = require('qs');
 config = require('./config');
 cron = require('node-cron');
 
+
 /**
  * APP ROUTES
  */
 // Web Pages
-var environment = process.env.NODE_ENV
-    , app = express();
+var environment = process.env.NODE_ENV, app = express();
 
 /**
  * HELPERS
@@ -49,7 +49,7 @@ var routes = require('./routes'),
  * MONGODB CONNECTION
  */
 
-connection = mongoose.connect('mongodb+srv://tabletally:s8944896d@cluster0-kdn9k.gcp.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true});
+connection = mongoose.connect('mongodb+srv://tabletally:s8944896d@cluster0-kdn9k.gcp.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true });
 
 
 /**
@@ -66,7 +66,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(methodOverride());
 app.set('trust proxy', 1); //trust first proxy
 
-app.use('/static', express.static('public'))
+app.use('/static', express.static('public'));
 
 // app.use(cors());
 

@@ -1,42 +1,5 @@
-nav{
-    text-align:center;
-    padding:20px 0px 10px 0px;
-    font-size:24px;
+body {
+  background-color: black;
 }
 
-nav h1{
-    margin-bottom:0px;
-}
-
-nav img{
-    width:150px;
-}
-.landing h2{
-    text-align: center;
-    font-size:24px;
-    padding:0px 20px;
-    margin:0px 0px 20px 0px;
-    font-weight:normal;
-}
-
-.landing h2 span{
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.landing h2 .country-selector{
-    display: inline-block;
-}
-
-.landing h2 .country-selector button{
-    padding:0px;
-}
-
-.landing h2 .country-selector .flag-icon{
-    font-size:24px;
-    margin-right:5px;
-}
-
-.landing h2 .country-selector .dropdown-item{
-    padding:5px 10px;
-}
+/*# sourceMappingURL=main.css.map */

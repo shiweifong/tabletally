@@ -1,4 +1,4 @@
-var entity = _require('/models/entitle');
+var entity = _require('/models/entity');
 
 // Generic get method for entity
 // Authorized - Admin, System Admin

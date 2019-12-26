@@ -68,9 +68,10 @@ app.set('trust proxy', 1); //trust first proxy
 
 app.use('/static', express.static('public'));
 
-// app.use(cors());
-
 app.get('/', routes.index);
+app.get('/dashboard', routes.dashboard);
+app.get('/login', routes.login);
+app.get('/signup', routes.signup);
 
 
 // APIs

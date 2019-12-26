@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 body{
-    background-color:black;
- }
+    background-color: v.$blue500;
+}

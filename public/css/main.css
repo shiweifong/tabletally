@@ -1,5 +1,11 @@
-body {
-  background-color: #3267B0;
+html * {
+  font-size: 16px;
+  color: #2D2D2D;
+  font-family: "Quicksand";
+}
+
+.navbar {
+  background-color: transparent !important;
 }
 
 /*# sourceMappingURL=main.css.map */

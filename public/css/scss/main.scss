@@ -1,5 +1,11 @@
 @use "variables" as v;
+html *
+{
+   font-size: 16px;
+   color: v.$grey800;
+   font-family: v.$fontfamily;
+}
 
-body{
-    background-color: v.$blue500;
+.navbar{
+    background-color:transparent !important; 
 }
